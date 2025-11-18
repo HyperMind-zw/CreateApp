@@ -17,9 +17,6 @@ const authRoutes = require('./routes/auth');
 const providerRoutes = require('./routes/providers');
 const fileRoutes = require('./routes/files');
 const transferRoutes = require('./routes/transfers');
-const accountRoutes = require('./routes/accounts');
-const backupRoutes = require('./routes/backups');
-const workflowRoutes = require('./routes/workflows');
 
 // Security middleware
 app.use(helmet());
@@ -52,9 +49,6 @@ app.use('/api/auth', authRoutes);
 app.use('/api/providers', providerRoutes);
 app.use('/api/files', fileRoutes);
 app.use('/api/transfers', transferRoutes);
-app.use('/api/accounts', accountRoutes);
-app.use('/api/backups', backupRoutes);
-app.use('/api/workflows', workflowRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
